@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: $font-base;
@@ -11,17 +12,20 @@ html, body {
   font-weight: 400;
   line-height: $line-height-computed;
   overflow-x: hidden;
+
   @include breakpoint(xl) {
     font-size: $font-size-small;
     line-height: $line-height-computed-sm;
   }
 }
-a{
+
+a {
   text-decoration: none;
   transition: $transition;
   color: $black;
 }
-img{
+
+img {
   max-width: 100%;
   height: auto;
 }
@@ -41,6 +45,8 @@ img{
   background-color: $green;
   cursor: pointer;
 }
-
+.green {
+  color: $green;
+}
 $hf: 40px;
 $blockIndend: 100px;

@@ -1,0 +1,303 @@
+.about-page {
+  .top-block {
+    @include breakpoint(sm) {
+      color: $black;
+    }
+  }
+}
+
+.story {
+  padding: 100px 0;
+
+  @include breakpoint (md) {
+    padding: 50px 0;
+  }
+
+  &-row {
+    display: flex;
+    margin: 0 -10px;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include breakpoint (md) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__img {
+    max-width: 515px;
+    padding: 0 10px;
+    position: relative;
+
+    @include breakpoint (xl) {
+      max-width: 40%;
+    }
+
+    @include breakpoint (md) {
+      max-width: 100%;
+      width: 100%;
+      padding: 0 10px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__content {
+    max-width: 610px;
+    padding: 0 10px;
+
+    @include breakpoint (xl) {
+      padding-left: 40px;
+      max-width: 60%;
+    }
+
+    @include breakpoint (md) {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+
+    .title-2 {
+      margin-bottom: 50px;
+    }
+
+    strong {
+      font-weight: 500;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.photo1 {
+  max-width: 515px;
+  width: 100%;
+  border-radius: 5px;
+
+  @include breakpoint (md) {
+    object-fit: cover;
+    max-width: 100%;
+  }
+}
+
+.photo2 {
+  max-width: 220px;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  border-radius: 5px;
+
+  @include breakpoint (lg) {
+    max-width: 60%;
+  }
+}
+
+.partners {
+  padding: 100px 0;
+  @include breakpoint (lg) {
+    padding: 50px 0;
+  }
+  &-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  &-item {
+    width: 50%;
+    padding: 0 10px;
+
+    @include breakpoint(md) {
+      width: 100%;
+    }
+  }
+
+  &-title {
+    margin-bottom: 80px;
+
+    @include breakpoint (md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &-card {
+    padding: 47px 61px 80px 61px;
+    border-radius: 5px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.11);
+    height: 100%;
+
+    @include breakpoint(md) {
+      padding: 40px 40px 60px 40px;
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint(xs) {
+      padding: 20px;
+    }
+
+    &__header {
+      margin-bottom: 40px;
+    }
+
+    &__content {
+      margin-bottom: 30px;
+    }
+
+    &__footer {
+      span {
+        color: $green;
+      }
+    }
+  }
+}
+
+.founder {
+  padding: 100px 0;
+  @include breakpoint (lg) {
+    padding: 50px 0;
+  }
+  &-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  &-content {
+    max-width: 505px;
+
+    @include breakpoint(md) {
+      max-width: 100%;
+    }
+
+    &__header {
+      margin-bottom: 30px;
+
+      p {
+        font-size: 12px;
+      }
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+
+  &-gallery {
+    max-width: 505px;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 40px;
+
+    @include breakpoint(md) {
+      max-width: 100%;
+    }
+
+    &__header {
+      p {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      margin-bottom: 40px;
+    }
+  }
+
+  &-item {
+    width: 50%;
+    padding: 0 10px;
+
+    @include breakpoint(md) {
+      width: 100%;
+    }
+  }
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__item {
+    max-width: 210px;
+    margin-bottom: 50px;
+    width: 50%;
+    padding: 0 10px;
+
+    @include breakpoint(sm) {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__name {
+    line-height: 15px;
+    font-size: 12px;
+  }
+
+  &__link {
+    color: $green;
+    transition: $transition;
+
+    &:hover {
+      color: $greenLight;
+    }
+  }
+
+  &__img {
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: $green;
+      opacity: .12;
+      mix-blend-mode: multiply;
+    }
+  }
+}
+
+.cta {
+  padding: 75px 0;
+  @include breakpoint (lg) {
+    padding: 50px 0;
+  }
+  &-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+
+  }
+  &-item {
+    width: 50%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    @include breakpoint (md) {
+      width: 100%;
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+  &__content {
+    max-width: 410px;
+
+    .title-2,
+    h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 40px;
+    }
+  }
+}
