@@ -14,6 +14,7 @@
   max-width: 350px;
   height: 58px;
   text-align: center;
+  border: none;
   @include breakpoint(xl) {
     font-size: $font-size-small;
     line-height: $line-height-computed-sm;
