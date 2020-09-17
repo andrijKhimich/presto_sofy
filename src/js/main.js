@@ -176,4 +176,31 @@ $(document).ready(function () {
   animationTrigger();
 
 
+  //pricing page faq accordion
+  $('.accordion__content').hide();
+  $('.accordion-list li a').click(function (e) {
+    e.preventDefault();
+    if ($(this).hasClass('accordion_active')) {
+      $(this).removeClass('accordion_active').closest('.accordion-list li').find('.accordion__content').slideUp(200);
+      $(this).find('.accordion__plus').removeClass('accordion__plus_active');
+    } else {
+      $(this).addClass('accordion_active').closest('.accordion-list li').find('.accordion__content').slideDown(200);
+      $(this).parent().siblings('.accordion-list li').children('.accordion-list li a').removeClass('accordion_active');
+      $(this).parent().siblings('.accordion-list li').find('.accordion__content').slideUp(200);
+      $(this).find('.accordion__plus').addClass('accordion__plus_active');
+      $(this).parent().siblings('.accordion-list li').find('.accordion__plus').removeClass('accordion__plus_active');
+    }
+  });
+
+  // pricing cards one height
+  function textHeight() {
+    var maxContent = 0;
+    $('.column').each(function () {
+      if ($(this).height() > maxContent) {
+        maxContent = $(this).height();
+      }
+    });
+    $('.column').height(maxContent);
+  }
+  textHeight();
 });
