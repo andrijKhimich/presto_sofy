@@ -1,0 +1,12 @@
+.vscode/
+assets/dist/
+package-lock.json
+/node_modules
+/build
+/psd
+/src/libs
+.DS_Store
+/.history
+/wp-content
+.idea/
+/.vscode

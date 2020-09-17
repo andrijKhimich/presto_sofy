@@ -1,0 +1,49 @@
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $red;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: $white;
+  transition: $transition;
+  padding: 10px 30px;
+  cursor: pointer;
+  width: fit-content;
+  min-width: 200px;
+  max-width: 350px;
+  height: 58px;
+  text-align: center;
+  @include breakpoint(xl) {
+    font-size: $font-size-small;
+    line-height: $line-height-computed-sm;
+    height: 50px;
+  }
+  @include breakpoint(lg) {
+    min-width: unset;
+  }
+  @include breakpoint(sm) {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &:hover{
+    background: $red-hovered;
+    transform: rotate(3deg);
+  }
+  &-white{
+    background: $white;
+    color: $red;
+    height: 45px;
+    font-size: 14px;
+    line-height: 1.3;
+    @include breakpoint(sm) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &:hover{
+      background: $red;
+      color: $white;
+    }
+  }
+}

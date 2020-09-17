@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-base;
+  color: $black;
+  font-size: $font-size-base;
+  font-weight: 400;
+  line-height: $line-height-computed;
+  overflow-x: hidden;
+  @include breakpoint(xl) {
+    font-size: $font-size-small;
+    line-height: $line-height-computed-sm;
+  }
+}
+a{
+  text-decoration: none;
+  transition: $transition;
+  color: $black;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 10px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(230, 230, 230);
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $green;
+  cursor: pointer;
+}
+
+$hf: 40px;
+$blockIndend: 100px;

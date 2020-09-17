@@ -1,0 +1,90 @@
+.form{
+  &-set{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(sm) {
+      flex-direction: column;
+    }
+  }
+  &-group{
+    position: relative;
+    margin-bottom: 25px;
+    max-width: 240px;
+    width: 100%;
+    @include breakpoint(sm) {
+      max-width: 100%;
+    }
+    input{
+      border: none;
+      outline: none;
+      border-bottom: 1px solid $black;
+      background: none;
+      padding: 0 0 20px;
+      font-size: 14px;
+      width: 100%;
+      &:focus{
+        + label{
+          transform: translateY(-90%);
+        }
+      }
+      &.filled{
+        + label{
+          transform: translateY(-90%);
+        }
+      }
+    }
+    label{
+      position: absolute;
+      font-size: 10px;
+      font-weight: 600;
+      left: 0;
+      top: 0;
+      transition: all 0.3s ease;
+      transform: translateY(-20%);
+    }
+  }
+  .wrap, .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .wrap{
+    >*{
+      max-width: 240px;
+      width: 100%;
+    }
+  }
+  .info{
+    font-size: 10px;
+    font-weight: 600;
+    justify-content: flex-start;
+    @include breakpoint(sm) {
+      display: none;
+    }
+    &-group{
+      line-height: $line-height-base;
+      &:not(:last-child){
+        margin-right: 20px;
+      }
+      a{
+        font-size: 12px;
+        font-weight: 500;
+        margin-top: 5px;
+        display: block;
+      }
+    }
+
+  }
+  button{
+    outline: none;
+    border: none;
+    font-size: 14px;
+    width: 236px;
+    @include breakpoint(sm) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}

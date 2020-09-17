@@ -1,0 +1,40 @@
+//fonts
+$font-base:  "Rubik", Helvetica, Arial, sans-serif;
+
+$font-size-base:          16px;
+$font-size-large:         ceil(($font-size-base * 1.25));
+$font-size-small:         ceil(($font-size-base * 0.85));
+
+$font-size-h1:            floor(($font-size-base * 3));
+$font-size-h2:            floor(($font-size-base * 2.3));
+$font-size-h3:            ceil(($font-size-base * 1.7));
+$font-size-h4:            ceil(($font-size-base * 1.25));
+$font-size-h5:            $font-size-base;
+$font-size-h6:            ceil(($font-size-base * 0.85));
+
+$line-height-base:        1.5;
+$line-height-computed:    floor(($font-size-base * $line-height-base));
+$line-height-computed-sm:    floor(($font-size-small * $line-height-base));
+
+
+//icons
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+}
+
+.icon-insta:before {
+  content: "\e905";
+}
+.icon-fb:before {
+  content: "\e902";
+}
+.icon-twitter:before {
+  content: "\e901";
+}

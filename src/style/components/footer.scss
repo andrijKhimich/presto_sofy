@@ -1,0 +1,107 @@
+.footer{
+  background: $green;
+  padding: $hf 0 5px;
+  color: $white;
+  @include breakpoint(xl) {
+    padding: $hf/2 0;
+  }
+  &-block{
+    &:first-child{
+      ul{
+        padding: 20px 0 10px;
+      }
+    }
+    >p{
+      padding-bottom: 10px;
+      font-weight: 500;
+    }
+  }
+  ul{
+    justify-content: space-between;
+    li{
+      a{
+        color: $white;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1;
+        @include breakpoint(xl) {
+          font-size: 12px;
+        }
+        &:hover{
+          color: $red;
+        }
+      }
+    }
+  }
+  &-top{
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    padding-bottom: 30px;
+
+    // need mobile version
+    @media(max-width: 850px){
+      display: none;
+    }
+
+    ul{
+      max-width: $column + 30;
+      li{
+        padding: 5px 0;
+        font-size: 14px;
+        line-height: 1.3;
+      }
+    }
+    .btn{
+      margin-top: 20px;
+    }
+  }
+  &-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    border-top: 1px solid rgba(249, 249, 249, 0.14);
+    padding-top: 20px;
+    @include breakpoint(sm) {
+      flex-direction: column;
+      justify-content: center;
+    }
+    ul:first-child{
+      display: flex;
+      width: 100%;
+      max-width: $column * 5 - 60;
+      @include breakpoint(sm) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 20px;
+      }
+    }
+  }
+  .menu, .social{
+    font-size: 12px;
+    a{
+      color: $white;
+    }
+  }
+  .btn{
+    font-size: 12px;
+    width: 171px;
+  }
+}
+.social{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  li{
+    margin: 0 20px;
+    a{
+      &:hover{
+        svg path{
+          fill:$red;
+        }
+      }
+    }
+  }
+}

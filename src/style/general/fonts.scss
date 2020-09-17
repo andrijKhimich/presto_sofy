@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url('../../fonts/Rubik-Regular.eot');
+  src: url('../../fonts/Rubik-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/Rubik-Regular.svg#Rubik-Regular') format('svg'),
+  url('../../fonts/Rubik-Regular.ttf') format('truetype'),
+  url('../../fonts/Rubik-Regular.woff') format('woff'),
+  url('../../fonts/Rubik-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../../fonts/Rubik-Medium.eot');
+  src: url('../../fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/Rubik-Medium.svg#Rubik-Medium') format('svg'),
+  url('../../fonts/Rubik-Medium.ttf') format('truetype'),
+  url('../../fonts/Rubik-Medium.woff') format('woff'),
+  url('../../fonts/Rubik-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../../fonts/Rubik-Black.eot');
+  src: url('../../fonts/Rubik-Black.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/Rubik-Black.svg#Rubik-Black') format('svg'),
+  url('../../fonts/Rubik-Black.ttf') format('truetype'),
+  url('../../fonts/Rubik-Black.woff') format('woff'),
+  url('../../fonts/Rubik-Black.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('../../fonts/Avenir-Medium.eot');
+  src: url('../../fonts/Avenir-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/Avenir-Medium.svg#Avenir-Medium') format('svg'),
+  url('../../fonts/Avenir-Medium.ttf') format('truetype'),
+  url('../../fonts/Avenir-Medium.woff') format('woff'),
+  url('../../fonts/Avenir-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+//icons
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../fonts/icomoon.eot?mssrjh');
+  src:  url('../../fonts/icomoon.eot?mssrjh#iefix') format('embedded-opentype'),
+  url('../../fonts/icomoon.ttf?mssrjh') format('truetype'),
+  url('../../fonts/icomoon.woff?mssrjh') format('woff'),
+  url('../../fonts/icomoon.svg?mssrjh#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

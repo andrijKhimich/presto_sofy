@@ -1,0 +1,1052 @@
+.top{
+  padding: $blockIndend 0;
+  @include breakpoint(xl) {
+    padding: $blockIndend / 2 0 $blockIndend;
+  }
+  @include breakpoint(sm) {
+    padding:  $blockIndend  0 $blockIndend - 100;
+  }
+  .top-block{
+    max-width: $column * 5 + 30;
+    @include breakpoint(xl) {
+      max-width: $column * 4;
+    }
+    @media(max-width: 650px){
+      max-width:100%;
+    }
+    @include breakpoint(sm) {
+      color: $white;
+    }
+  }
+  &-sub{
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  &-image{
+    max-width: $column * 9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    @include breakpoint(xxl) {
+      max-width: $column * 7;
+    }
+    @include breakpoint(xl) {
+      max-width: $column * 5;
+    }
+    @include breakpoint(md) {
+      display: none;
+    }
+    &_mobile{
+      display: none;
+      @include breakpoint(md) {
+       display: block;
+      }
+    }
+  }
+  &-title{
+    font-size: $font-size-h1 * $line-height-base / $line-height-base;
+    font-weight: 600;
+    line-height: 57px;
+    padding: 10px 0;
+    @include breakpoint(xl) {
+      font-size: 36px;
+      line-height: 45px;
+    }
+    @include breakpoint(lg) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+  svg{
+    width: 100%;
+    position: absolute;
+    right: 0;
+  }
+  &-subtitle{
+    padding: 20px 0 30px;
+    max-width: 410px;
+  }
+  .btn{
+    opacity: 0;
+    width: 266px;
+    height: 58px;
+    font-size: 14px;
+    @include breakpoint(md) {
+      width: 100%;
+    }
+    &.in-view{
+      opacity: 1;
+    }
+  }
+  path.anim1 {
+    animation: topSvg 3s ease-in-out 6s infinite;
+  }
+  path.anim2 {
+    animation: topSvg-2 7s ease-in-out infinite;
+  }
+  path.anim3 {
+    animation: topSvg-3 10s ease-in-out infinite;
+  }
+  path.anim4 {
+    animation: topSvg 7s ease-in-out 3s infinite;
+  }
+  path.anim5 {
+    animation: topSvg 7s ease-in-out 1s infinite;
+  }
+
+}
+
+
+.app{
+  padding: $blockIndend * 2 0 $blockIndend;
+  position: relative;
+  @include breakpoint(xl) {
+    padding:  $blockIndend + 50 0 0;
+  }
+  @include breakpoint(sm) {
+    padding: $blockIndend * 2 0 0;
+  }
+  &-title{
+    max-width: $column * 8;
+    text-align: center;
+    margin: 0 auto;
+    transition: $transition-2;
+    transform: translateY(30px);
+    opacity: 0;
+    @include breakpoint(lg) {
+      max-width: 650px;
+    }
+    &.in-view{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  .slider{
+    margin: 100px 0;
+    .item{
+      margin: 0 auto;
+      text-align: center;
+      opacity: 0.7;
+      &-img{
+        width: 170px;
+        height: 160px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0);
+        border-radius: 5px;
+        @include breakpoint(sm) {
+          width: 110px;
+          height: 100px;
+        }
+        img{
+          max-width: 100%;
+          max-height: 100%;
+          transition: $transition;
+        }
+      }
+      p{
+        padding-top: 20px;
+        opacity: 0;
+        transition: $transition;
+        color: #52565B;
+      }
+    }
+    .swiper-slide-active{
+      .item{
+        opacity: 1;
+        &-img{
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+          img{
+            transform: scale(1.1);
+          }
+        }
+        p{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+
+.why-sofy{
+  position: relative;
+  padding: $blockIndend  0 50px;
+  @include breakpoint(xl) {
+    padding:  $blockIndend - 50 0 50px;
+  }
+  &:before{
+    @include pseudo();
+    background-image: url("../../img/bg2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left:0;
+    z-index: -1;
+  }
+  .title{
+    @include breakpoint(sm) {
+      text-align: center;
+    }
+  }
+  .list{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 0;
+    @media(max-width: 650px){
+      flex-wrap: wrap;
+      justify-content: space-around;
+      text-align: center;
+    }
+    @include breakpoint(sm) {
+      padding: 20px 0;
+    }
+    &-item{
+      width: 100%;
+      max-width: $column * 3;
+      font-size: 16px;
+      margin-right: $column;
+      @include breakpoint(xl) {
+        margin-right: $column / 2;
+      }
+      @include breakpoint(lg) {
+        max-width: $column * 2;
+      }
+      @media(max-width: 650px){
+        margin: 20px 0;
+        max-width: $column * 2;
+      }
+      @include breakpoint(sm) {
+        max-width: 100%;
+      }
+    }
+    &-name{
+      font-weight: 500;
+      padding: 15px 0;
+      font-size: 16px;
+    }
+  }
+}
+
+
+.group{
+  padding: $blockIndend 0 50px;
+  position: relative;
+  @include breakpoint(xl) {
+    padding:  0 0 $blockIndend;
+  }
+  @include breakpoint(sm) {
+    padding:  0 0 50px;
+  }
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    >*{
+      width: 50%;
+    }
+    @include breakpoint(xl) {
+      flex-direction: column;
+      >*{
+        width: 100%;
+      }
+    }
+  }
+  &-lt{
+    max-width: $column * 3 + 30;
+    padding-top: 100px;
+    @include breakpoint(xl) {
+      max-width: 70%;
+    }
+    @include breakpoint(md) {
+      max-width: 100%;
+    }
+    @include breakpoint(xl) {
+      padding-top: 50px;
+    }
+  }
+  &-rt {
+    position: relative;
+    svg {
+      width: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+      transition: $transition-2;
+      transform: scale(0.6);
+      @include breakpoint(md) {
+        height: auto;
+        max-width: 100%;
+      }
+      &.in-view{
+        transform: scale(1);
+      }
+    }
+  }
+  &-title{
+    transition: $transition-2;
+    transform: translateY(30px);
+    opacity: 0;
+    font-weight: 600;
+    @include breakpoint(sm) {
+      text-align: center;
+    }
+    &.in-view{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  &-text{
+    padding: 20px 0 40px;
+    transition: $transition-2;
+    opacity: 0;
+    font-weight: 400;
+    @include breakpoint(sm) {
+      text-align: center;
+    }
+    &.in-view{
+      opacity: 1;
+    }
+    b{
+      font-weight: 500;
+      padding: 10px 0;
+      display: block;
+    }
+  }
+  .btn{
+    text-transform: inherit;
+    opacity: 0;
+    @include breakpoint(md) {
+      width: 100%;
+    }
+    @include breakpoint(sm) {
+      margin: 0 auto;
+    }
+    &.in-view{
+      opacity: 1;
+    }
+  }
+}
+
+
+.testing{
+  &-lt{
+    @include breakpoint(xl) {
+      order: 2;
+      padding-top: 250px;
+    }
+    @include breakpoint(lg) {
+      padding-top: 200px;
+    }
+    @include breakpoint(md) {
+      padding-top: 150px;
+      padding-left: 0;
+    }
+    @include breakpoint(sm) {
+      padding-top: 50px;
+    }
+  }
+  &-rt{
+    margin-right: $column;
+    @include breakpoint(xl) {
+     order: 1;
+      margin-right: 0;
+    }
+    img{
+      transition: $transition-2;
+      &:nth-child(1){
+        transform: translate(188%, 145%) scale(0);
+        transition-delay: 0.5s;
+        @include breakpoint(xl) {
+          animation: none;
+          transform: translate(190%,145%) scale(0);
+        }
+        @include breakpoint(sm) {
+          transform: translate(5%,25%) scale(0);
+        }
+      }
+      &:nth-child(2){
+        transform: translate(-45%, 27%) scale(0);
+        @include breakpoint(xl) {
+          animation: none;
+        }
+        @include breakpoint(sm) {
+          transform: translate(0,14%) scale(0);
+        }
+      }
+      &:nth-child(3){
+        transform: translate(0, 17%);
+        animation: floatAnim 5s ease-in-out infinite;
+        @include breakpoint(xl) {
+          animation: none;
+          transform: translate(0, 17%);
+          max-width: 50%;
+        }
+      }
+      &.in-view{
+        &:nth-child(1){
+          transform: translate(188%, 145%) scale(1);
+          @include breakpoint(xl) {
+            animation: none;
+            transform: translate(190%,145%) scale(1);
+          }
+          @include breakpoint(sm) {
+            transform: translate(5%,25%) scale(1);
+          }
+        }
+        &:nth-child(2){
+          transform: translate(-45%, 27%) scale(1);
+          @include breakpoint(sm) {
+            transform: translate(28%,14%) scale(1);
+          }
+        }
+      }
+      &:hover{
+        &:nth-child(1){
+          filter: drop-shadow(2px 4px 6px #c59a9d);
+          transform: translate(188%, 145%) scale(1.1);
+          transition-delay: 0s;
+        }
+        &:nth-child(2){
+          filter: drop-shadow(2px 4px 6px #c59a9d);
+          transform: translate(-45%, 27%) scale(1.1);
+        }
+        &:nth-child(3){
+          filter: drop-shadow(2px 4px 6px #c59a9d);
+          transform: translate(-25%, 17%) scale(1.1);
+        }
+      }
+    }
+  }
+  .btn{
+    width: 297px;
+    @include breakpoint(md) {
+      width: 100%;
+    }
+  }
+}
+
+
+.automation{
+  padding: $blockIndend * 2 0 0;
+  @include breakpoint(xl) {
+    padding: $blockIndend - 50  0 0;
+  }
+  &-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    >img{
+      @include breakpoint(md) {
+        max-width: 150px;
+      }
+      @include breakpoint(sm) {
+        max-width: 80px;
+      }
+    }
+    ul{
+      padding-left: 40px;
+      @include breakpoint(sm) {
+        padding-left: 15px;
+      }
+    }
+    .list-icon{
+      li{
+        margin: 20px 0;
+      }
+    }
+    .list-check{
+      li{
+        margin: 10px 0;
+        margin-left: 10px;
+        opacity: 0;
+        transition: $transition-2;
+        &:nth-child(1){
+          margin-left: 0;
+          transition-delay: 0.3s;
+        }
+        &:nth-child(2){
+          margin-left: 0;
+          transition-delay: 0.6s;
+        }
+        &:nth-child(3){
+          transition-delay: 0.9s;
+        }
+        &:nth-child(4){
+          transition-delay: 1.1s;
+        }
+        &:nth-child(5){
+          transition-delay: 1.3s;
+        }
+        &:nth-child(6){
+          transition-delay: 1.5s;
+        }
+      }
+      &.in-view{
+        li{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &-rt{
+    @include breakpoint(xl) {
+      padding-bottom: 100px;
+      max-width: 700px;
+    }
+    @include breakpoint(sm) {
+      padding-bottom: 50px;
+    }
+    svg{
+      transform: translateY(-20%) scale(1);
+    }
+    img{
+      transition: $transition;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+  &-lt{
+    padding-top: 0;
+    max-width: $column * 4 - 30;
+    margin-right: $column;
+    @include breakpoint(xl) {
+      max-width: 70%;
+      margin-right:0;
+    }
+    @include breakpoint(md) {
+      max-width: 100%;
+    }
+    .group-text{
+      max-width: $column * 3;
+      @include breakpoint(xl) {
+        max-width: 70%;
+      }
+      @include breakpoint(md) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+
+.schedule{
+  @include breakpoint(xl) {
+    padding: 0;
+  }
+  &-rt{
+    @include breakpoint(xl) {
+      order: 1;
+      padding-bottom: 30px;
+    }
+    img{
+      transition: $transition;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+  &-lt{
+    max-width: $column * 5 - 60;
+    @include breakpoint(xl) {
+      order: 2;
+      max-width: 70%;
+    }
+    @include breakpoint(md) {
+      max-width: 100%;
+    }
+    .group-text{
+      max-width: $column * 4 - 60;
+      @include breakpoint(xl) {
+        max-width: 70%;
+      }
+      @include breakpoint(md) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .btn{
+    padding: 10px 40px;
+    @include breakpoint(md) {
+      padding: 10px 20px;
+    }
+  }
+}
+
+
+.validate{
+  padding: 0;
+  @include breakpoint(xl) {
+    padding:  0 0 $blockIndend ;
+  }
+  @include breakpoint(sm) {
+    padding:  0 0 $blockIndend - 50;
+  }
+  &-lt{
+    margin-right: $column;
+    order: 2;
+    max-width: $column * 3 + 60;
+    @include breakpoint(xl) {
+      padding-top: 0;
+      margin-right: 0;
+      max-width: 70%;
+    }
+    @include breakpoint(md) {
+      max-width: 100%;
+    }
+  }
+  &-rt{
+    order: 1;
+    svg:first-child{
+      position: relative;
+      z-index: 2;
+      max-width: 100%;
+    }
+    svg{
+      transform: translateY(0) scale(1);
+    }
+  }
+  .btn{
+    width: 358px;
+    @include breakpoint(md) {
+      width: 100%;
+    }
+  }
+}
+
+
+.integrations{
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @include breakpoint(lg) {
+      flex-wrap: wrap;
+    }
+  }
+  svg{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    transform: translateY(50px);
+    @include breakpoint(xl) {
+      transform: translateY(0);
+    }
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+  .img-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include circle(165px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: $white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    transition: $transition;
+    z-index: 2;
+    @include breakpoint(lg) {
+      width: 90px !important;
+      height: 90px !important;
+      position: relative;
+      bottom: 0 !important;
+      left: 0 !important;
+      order: 2;
+      margin: 10px;
+    }
+    &:hover{
+      transform: scale(0.9);
+    }
+
+    &:nth-child(1){
+      @include circle(165px);
+    }
+    &:nth-child(2){
+      left: 12%;
+      bottom: 225px;
+      @include circle(124px);
+    }
+    &:nth-child(3){
+      left: 28%;
+      bottom: 355px;
+      @include circle(108px);
+    }
+    &:nth-child(4){
+      left: 30%;
+      bottom: -50px;
+      @include circle(121px);
+    }
+    &:nth-child(5){
+      left: 66%;
+      bottom: -30px;
+      @include circle(122px);
+    }
+    &:nth-child(6){
+      left: 15%;
+      bottom: 40px;
+      @include circle(121px);
+    }
+    &:nth-child(7){
+      left: 80%;
+      bottom: 120px;
+      @include circle(142px);
+    }
+    &:nth-child(8){
+      bottom: 335px;
+      left: 70%;
+      @include circle(111px);
+    }
+    &:nth-child(9){
+      bottom: -70px;
+      left: 48%;
+      @include circle(114px);
+    }
+  }
+  &-block{
+    text-align: center;
+    max-width: 350px;
+    @include center('center');
+    @include breakpoint(lg) {
+      position: relative;
+      border: 0;
+      margin-bottom: 50px;
+      width: 100%;
+      display: none;
+    }
+  }
+  &-title{
+    transition: $transition-2;
+    opacity: 0;
+    transform: translateY(-30px);
+    padding-bottom: 15px;
+    &.in-view{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  &-text{
+    transition: $transition-2;
+    opacity: 0;
+    transform: translateY(30px);
+    &.in-view{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+
+.testimonials{
+  position: relative;
+  padding: $blockIndend + 100 0 50px;
+  @include breakpoint(xl) {
+    padding:  $blockIndend 0 50px;
+  }
+  @include breakpoint(md) {
+    padding:  $blockIndend / 2 0 0;
+  }
+  &:before{
+    @include pseudo();
+    background-image: url("../../img/bg3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left:0;
+    z-index: -1;
+  }
+  .container{
+    padding-top: 100px;
+    position: relative;
+  }
+  .swiper-button-next{
+    right: $column;
+    @include breakpoint(xl) {
+      right:5px;
+    }
+  }
+  .swiper-button-prev{
+    right: $column * 2 - 20;
+    @include breakpoint(xl) {
+      right: 80px;
+    }
+  }
+  .swiper-button-prev, .swiper-button-next{
+    top: 125px;
+    @include breakpoint(md) {
+      top: 115px;
+    }
+  }
+  .slider-2{
+    margin: 60px 0;
+  }
+  .item{
+    display: flex;
+    align-items: flex-start;
+    padding: 0 5px;
+    @include breakpoint(md) {
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    &-link{
+      text-align: center;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 20px 0;
+    }
+    &-lt{
+      margin-right: $column;
+      @include breakpoint(xl) {
+        margin-right: $column / 2;
+      }
+      @include breakpoint(md) {
+       margin: 0 auto;
+      }
+      img{
+        max-width: 410px;
+        @include breakpoint(lg) {
+          max-width: 310px;
+        }
+      }
+    }
+    &-rt{
+      max-width: $column * 7;
+    }
+    &-author{
+      font-weight: 500;
+      padding: $column / 2 0 20px;
+      font-size: 12px;
+      span{
+        color: $green;
+      }
+    }
+    p{
+      b{
+        font-weight: 600;
+        display: block;
+        padding: 10px 0;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+
+.news{
+  padding: $blockIndend - 50 0 0;
+  @include breakpoint(xl) {
+    padding:  $blockIndend - 100 0 0;
+  }
+  @include breakpoint(md) {
+    padding:  0 ;
+  }
+  .container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    @include breakpoint(md) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  .swiper-button-prev, .swiper-button-next{
+    top: 75px;
+    @include breakpoint(md) {
+      top: 15px;
+    }
+  }
+  .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include breakpoint(md) {
+      justify-content: flex-start;
+      text-align: left;
+    }
+  }
+  .slider-3{
+    padding: 80px 0 0;
+  }
+  .item{
+    text-align: center;
+    font-size: 14px;
+    margin: 0 auto;
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+    p{
+      padding: 20px 0;
+    }
+    a{
+      color: $red;
+      font-weight: 500;
+      opacity: 0;
+    }
+    &:hover{
+      a{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+.contacts{
+  padding: $blockIndend + 50 0 $blockIndend - 50;
+  @include breakpoint(xl) {
+    padding:  $blockIndend - 50 0 0;
+  }
+  @include breakpoint(sm) {
+    padding: 50px 0;
+  }
+  &:before{
+    @include pseudo();
+    background-image: url("../../img/bg4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left:0;
+    z-index: -1;
+  }
+  .container{
+    @include breakpoint(xl) {
+       flex-direction: row;
+       >*{
+         width: 48%;
+       }
+     }
+    @media(max-width: 870px){
+      flex-direction: column;
+      >*{
+        width: 100%;
+      }
+    }
+  }
+  &-lt{
+    max-width: $column * 4 + 30;
+    @media(max-width: 870px){
+      padding: 50px 0;
+    }
+    @include breakpoint(sm) {
+      padding: 0 0 50px;
+    }
+  }
+  &-rt{
+    @include breakpoint(xl) {
+      width: 20%;
+    }
+    svg{
+      position: relative;
+      transform: scale(1);
+      max-width: 100%;
+      @media(max-width: 870px){
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 30px;
+        height: auto;
+      }
+    }
+  }
+  &-text{
+    font-size: 14px;
+  }
+  .wrap{
+    @include breakpoint(sm) {
+     flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  .info{
+    @include breakpoint(sm) {
+      max-width: 100%;
+    }
+    >*{
+      @include breakpoint(sm) {
+        width: 50%;
+      }
+    }
+  }
+  .btn{
+    @include breakpoint(xl) {
+      margin-right: 40px;
+      max-width: 185px;
+    }
+    @include breakpoint(sm) {
+      margin: 0 auto 20px;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  svg{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.swiper-button-prev, .swiper-button-next{
+  position: absolute;
+  top: 0;
+  right: 5px;
+  z-index: 3;
+  @include breakpoint(sm) {
+    right: 15px;
+  }
+  &:after{
+    display: none;
+  }
+  svg{
+    path{
+      transition: $transition;
+    }
+    &:hover{
+      path{
+        fill: $green;
+      }
+    }
+  }
+}
+
+
+.swiper-button-prev{
+  left: unset;
+  right: 80px;
+  svg{
+    transform: rotate(180deg);
+  }
+}
+
+
+.background{
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+

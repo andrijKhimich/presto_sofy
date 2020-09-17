@@ -1,0 +1,177 @@
+.header{
+  padding: $hf 0;
+  position: relative;
+  z-index: 2;
+  @include breakpoint(xl) {
+    padding: $hf/2 0;
+  }
+  &.opened{
+    background: $white;
+  }
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: $column;
+    @include breakpoint(xl) {
+      padding-right: $gutter;
+    }
+  }
+  &-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .btn{
+    font-size: 17px;
+    font-weight: 500;
+    @include breakpoint(xl) {
+      background: $red;
+      color: $white;
+    }
+    @media(max-width: 950px) {
+      display: none;
+    }
+  }
+  .close{
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    span{
+      width: 100%;
+      height: 1px;
+      background: $red;
+      display: block;
+      position: relative;
+      margin: 7px 0;
+      transition: $transition;
+    }
+    &.opened{
+      span{
+        position: absolute;
+        top: 13px;
+        &:first-child{
+          transform: rotate(-45deg);
+        }
+        &:last-child{
+          transform: rotate(45deg);
+        }
+        &:nth-last-child(2){
+          display: none;
+        }
+      }
+    }
+    @media(max-width: 950px) {
+      display: block;
+    }
+  }
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 25px;
+  font-size: 14px;
+  @media(max-width: 950px) {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 80px;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: $transition;
+    background: $white;
+  }
+  &.opened{
+    height: 50vh;
+    padding: 50px 0;
+  }
+  >li{
+    margin: 0 20px;
+    position: relative;
+    line-height: 1.3;
+    @include breakpoint(xl) {
+      margin: 0 25px;
+    }
+    @media(max-width: 950px) {
+      font-size: 16px;
+      width: 100%;
+      text-align: center;
+    }
+    >a{
+      position: relative;
+      z-index: 2;
+      &:hover{
+        color: $white;
+        @include breakpoint(xxl) {
+          color: $red;
+        }
+      }
+    }
+    &:nth-child(-n+3){
+      >a{
+        &:hover{
+          color: $red;
+        }
+      }
+    }
+    &.has-children{
+      &:after{
+        @include pseudo('block');
+        border-bottom: 2px solid $black;
+        border-right: 2px solid $black;
+        height: 4px;
+        margin-top: -3px;
+        pointer-events: none;
+        right: -12px;
+        top: 50%;
+        transform-origin: 66% 66%;
+        transform: rotate(45deg);
+        transition: all 0.15s ease-in-out;
+        width: 4px;
+      }
+      &:before{
+        @include pseudo('block');
+        width: 100%;
+        height: 50px;
+        bottom: -100%;
+      }
+      &:hover{
+        &:after{
+          border-bottom: 2px solid $red;
+          border-right: 2px solid $red;
+          transform: rotate(-135deg);
+        }
+        ul{
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
+    >ul{
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, 10%);
+      background: $white;
+      box-shadow: 0 0 7px 0 #f1f1f1;
+      padding: 20px 30px;
+      min-width: $column * 2;
+      transition: $transition;
+      opacity: 0;
+      pointer-events: none;
+      li{
+        padding: 5px 0;
+        a{
+          &:hover{
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}

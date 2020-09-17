@@ -1,0 +1,19 @@
+//general styles
+@import 'general/reset';
+@import 'general/fonts';
+@import 'general/colors';
+@import 'general/mixin';
+@import 'general/breakpoints';
+@import 'general/typography';
+@import 'general/transitions';
+@import 'general/global';
+
+//component styles
+@import 'components/titles';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/header';
+@import 'components/footer';
+
+//page styles
+@import 'pages/front-page';
