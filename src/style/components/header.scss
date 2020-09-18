@@ -25,6 +25,9 @@
   .btn{
     font-size: 17px;
     font-weight: 500;
+    &:hover {
+      transform: none;
+    }
     @include breakpoint(xl) {
       background: $red;
       color: $white;

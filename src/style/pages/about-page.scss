@@ -7,10 +7,10 @@
 }
 
 .story {
-  padding: 100px 0;
+  padding: 50px 0 100px 0;
 
   @include breakpoint (md) {
-    padding: 50px 0;
+    padding: 0 0 50px 0;
   }
 
   &-row {
@@ -152,9 +152,9 @@
 }
 
 .founder {
-  padding: 100px 0;
+  padding: 100px 0 0 0;
   @include breakpoint (lg) {
-    padding: 50px 0;
+    padding: 50px 0 0 0;
   }
   &-row {
     display: flex;
@@ -265,10 +265,7 @@
 }
 
 .cta {
-  padding: 75px 0;
-  @include breakpoint (lg) {
-    padding: 50px 0;
-  }
+  padding: 50px 0;
   &-row {
     display: flex;
     flex-wrap: wrap;
@@ -291,7 +288,12 @@
   }
   &__content {
     max-width: 410px;
-
+    
+    .btn {
+      &:hover {
+        transform: none;
+      }
+    }
     .title-2,
     h2 {
       margin-bottom: 20px;
